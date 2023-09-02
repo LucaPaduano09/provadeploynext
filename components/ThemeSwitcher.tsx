@@ -39,13 +39,16 @@ export function ThemeSwitcher() {
         <DropdownMenu aria-label="Dynamic Actions" items={items}>
           {(item) => (
             <DropdownItem
-              key={item.key}
-              color={item.key === "delete" ? "danger" : "default"}
-              className={item.key === "delete" ? "text-danger" : ""}
+              key={(item as any).key}
+              color={(item as any) === "delete" ? "danger" : "default"}
+              className={(item as any) === "delete" ? "text-danger" : ""}
             >
-              <button className="w-full" onClick={() => setTheme(item.color)}>
+              <button
+                className="w-full"
+                onClick={() => setTheme((item as any).color)}
+              >
                 {" "}
-                {item.color}
+                {(item as any).color}
               </button>
             </DropdownItem>
           )}

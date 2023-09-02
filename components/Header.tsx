@@ -66,7 +66,7 @@ const Header = () => {
         </NavbarItem>
       </NavbarContent> */}
       <NavbarContent justify="end">
-        <Image src="/befootball-logo.png" width={50} height={50} />
+        <Image alt="logo" src="/befootball-logo.png" width={50} height={50} />
       </NavbarContent>
       {isDesktop && <ThemeSwitcher />}
       <NavbarMenu className="gap-6 top-[5rem]">
